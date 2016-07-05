@@ -40,7 +40,7 @@ import org.xutils.x;
         }
         return  mExApi;
     }
-    private static void openEXApp(){
+    public static void openEXApp(){
         if(state==true){
             start();
         }else{
