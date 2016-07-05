@@ -60,7 +60,7 @@ import org.xutils.x;
             requestParams.setBodyContent(jsonObject.toString());
             requestParams.setAsJsonContent(true);
             try {
-                x.http().post(requestParams, new Callback.CommonCallback<String>() {
+                x.http().get(requestParams, new Callback.CommonCallback<String>() {
                     @Override
                     public void onSuccess(String result) {
                         try {
