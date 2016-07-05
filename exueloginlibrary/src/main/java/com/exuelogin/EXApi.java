@@ -50,27 +50,29 @@ import org.xutils.x;
 
     private static void checkIDisAvaliable() {
         if (NetworkUtils.isNetworkAvailable(BaseApplication.getmContext())) {
-            RequestParams requestParams = new RequestParams(Global.BASEURL + "v1/searchPage");
-            JSONObject jsonObject = new JSONObject();
-            try {
-                jsonObject.put("app_id",APP_ID);
-            } catch (JSONException e) {
-                e.printStackTrace();
-            }
-            requestParams.setBodyContent(jsonObject.toString());
-            requestParams.setAsJsonContent(true);
+            RequestParams requestParams = new RequestParams(Global.BASEURL);
+            requestParams.addQueryStringParameter("appkey",APP_ID);
+//            JSONObject jsonObject = new JSONObject();
+//            try {
+//                jsonObject.put("app_id",APP_ID);
+//            } catch (JSONException e) {
+//                e.printStackTrace();
+//            }
+//            requestParams.setBodyContent(jsonObject.toString());
+//            requestParams.setAsJsonContent(true);
             try {
                 x.http().get(requestParams, new Callback.CommonCallback<String>() {
                     @Override
                     public void onSuccess(String result) {
-                        try {
-                            JSONObject object=new JSONObject(result);
-                            appName=object.getString("appName");
-                            packageName=object.getString("packageName");
-                            state=object.getBoolean("state");
-                        } catch (JSONException e) {
-                            e.printStackTrace();
-                        }
+                        System.out.println("第三方验证返回的数据是:"+result);
+//                        try {
+//                            JSONObject object=new JSONObject(result);
+//                            appName=object.getString("appName");
+//                            packageName=object.getString("packageName");
+//                            state=object.getBoolean("state");
+//                        } catch (JSONException e) {
+//                            e.printStackTrace();
+//                        }
 
                     }
 
