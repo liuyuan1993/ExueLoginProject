@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/ExueLoginProject.iml" filepath="$PROJECT_DIR$/ExueLoginProject.iml" />
       <module fileurl="file://$PROJECT_DIR$/exueloginlibrary/exueloginlibrary.iml" filepath="$PROJECT_DIR$/exueloginlibrary/exueloginlibrary.iml" />
+      <module fileurl="file://$PROJECT_DIR$/test/test.iml" filepath="$PROJECT_DIR$/test/test.iml" />
     </modules>
   </component>
 </project>
