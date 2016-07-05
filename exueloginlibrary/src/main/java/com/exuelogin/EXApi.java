@@ -1,14 +1,12 @@
 package com.exuelogin;
-
 import android.content.ComponentName;
+import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import com.exuelogin.base.BaseApplication;
 import com.exuelogin.config.Global;
 import com.exuelogin.utils.CommonTools;
 import com.exuelogin.utils.NetworkUtils;
-import org.json.JSONException;
-import org.json.JSONObject;
 import org.xutils.common.Callback;
 import org.xutils.http.RequestParams;
 import org.xutils.x;
@@ -27,7 +25,7 @@ import org.xutils.x;
     private EXApi(String APP_ID) {
         this.APP_ID=APP_ID;
     }
-    public static EXApi createEXAPI(String APP_ID){
+    public static EXApi createEXAPI(Context context,String APP_ID){
         if(mExApi==null){
             synchronized (mExApi){
                 if(mExApi==null){
