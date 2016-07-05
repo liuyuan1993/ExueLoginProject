@@ -25,7 +25,7 @@ import org.xutils.x;
     private EXApi(String APP_ID) {
         this.APP_ID=APP_ID;
     }
-    public static EXApi createEXAPI(Context context,String APP_ID){
+    public static EXApi createEXAPI(String APP_ID){
         if(mExApi==null){
             synchronized (mExApi){
                 if(mExApi==null){
